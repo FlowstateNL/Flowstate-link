@@ -296,9 +296,14 @@ code {
 
 .grid-3,
 .grid-4,
-.link-grid {
+.link-grid,
+.grid-2 {
   display: grid;
   gap: 1rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-3 {
@@ -339,6 +344,128 @@ code {
 .mini-card a,
 .source-card a {
   font-weight: 800;
+}
+
+.decision-table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  font-size: 0.96rem;
+}
+
+.decision-table th,
+.decision-table td {
+  padding: 0.85rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.decision-table th {
+  background: #eef2eb;
+  color: var(--ink);
+  font-weight: 850;
+}
+
+.decision-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.4rem 0;
+}
+
+.score-item {
+  min-height: 132px;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.score-item strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--green-dark);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.workflow-map {
+  display: grid;
+  gap: 0.85rem;
+  margin: 1.4rem 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: workflow;
+}
+
+.workflow-map li {
+  position: relative;
+  padding: 1rem 1rem 1rem 3.2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--muted);
+}
+
+.workflow-map li::before {
+  counter-increment: workflow;
+  content: counter(workflow);
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  display: grid;
+  place-items: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 999px;
+  background: var(--green-dark);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.example-box {
+  margin: 1.4rem 0;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--green-dark);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.example-box h3 {
+  margin-bottom: 0.55rem;
+}
+
+.example-box p,
+.example-box li,
+.score-item p {
+  color: var(--muted);
+}
+
+.toc-card {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.toc-card ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.toc-card li {
+  margin-bottom: 0.4rem;
 }
 
 .metric strong {
@@ -470,6 +597,24 @@ code {
   color: var(--muted);
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--green-dark);
+}
+
 .footer-inner {
   display: flex;
   justify-content: space-between;
@@ -512,7 +657,9 @@ code {
 
   .grid-3,
   .grid-4,
-  .link-grid {
+  .link-grid,
+  .grid-2,
+  .score-grid {
     grid-template-columns: 1fr;
   }
 

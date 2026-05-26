@@ -26,6 +26,7 @@
     "citation": [
       "https://developers.google.com/search/docs/appearance/ai-features",
       "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data",
+      "https://developers.google.com/search/docs/essentials/technical",
       "https://llmstxt.org/"
     ]
   }
@@ -40,6 +41,7 @@
         <a href="../seo-automatisering/">SEO</a>
         <a href="../content-automatisering/">Content</a>
         <a href="../google-indexatie/">Indexatie</a>
+        <a href="../contentcluster-voorbeeld/">Clusters</a>
         <a href="../bronnen/">Bronnen</a>
       </nav>
     </div>
@@ -81,6 +83,15 @@
               indexeerbaar en nuttig zijn. Extra AI-bestanden zijn geen magische rankingfactor.
             </p>
           </div>
+          <div class="toc-card">
+            <h3>Op deze pagina</h3>
+            <ul>
+              <li><a href="#geen-truc">Geen aparte truc</a></li>
+              <li><a href="#elementen">GEO-elementen</a></li>
+              <li><a href="#antwoordblok">Antwoordblok</a></li>
+              <li><a href="#checklist">Checklist</a></li>
+            </ul>
+          </div>
         </aside>
         <article class="prose">
           <h2>Wat is GEO?</h2>
@@ -95,6 +106,17 @@
             kan crawlen, renderen en begrijpen.
           </p>
 
+          <h2 id="geen-truc">Belangrijk: GEO is geen aparte truc bovenop SEO</h2>
+          <p>
+            Google geeft aan dat dezelfde SEO-basis blijft gelden voor AI Overviews en AI Mode. Een pagina moet
+            indexeerbaar, toegankelijk, nuttig en geschikt voor snippets zijn. Er is geen speciale schema.org-markup
+            of apart AI-bestand nodig om in AI-features te kunnen verschijnen.
+          </p>
+          <p>
+            Dat maakt GEO vooral een kwaliteitsdiscipline: betere antwoorden, duidelijkere structuur, betere bronnen
+            en minder afhankelijkheid van losse, onzichtbare optimalisaties.
+          </p>
+
           <h2>Wat maakt een pagina citeerbaar?</h2>
           <ul>
             <li>Een helder antwoord direct onder de relevante kop.</li>
@@ -104,6 +126,49 @@
             <li>Interne links naar verdiepende pagina's binnen hetzelfde cluster.</li>
             <li>Structured data als ondersteuning, niet als vervanging van inhoud.</li>
           </ul>
+
+          <h2 id="elementen">GEO-elementen: nuttig, maar niet verwarren met garanties</h2>
+          <table class="decision-table">
+            <thead>
+              <tr>
+                <th>GEO-element</th>
+                <th>Waarom nuttig</th>
+                <th>Niet verwarren met</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Direct antwoord onder H2</td>
+                <td>Sneller scanbaar en beter citeerbaar.</td>
+                <td>Keyword stuffing of onnatuurlijke FAQ-blokken.</td>
+              </tr>
+              <tr>
+                <td>Bronnen bij claims</td>
+                <td>Maakt feiten controleerbaar.</td>
+                <td>Een willekeurige linklijst onderaan.</td>
+              </tr>
+              <tr>
+                <td>Interne clusterlinks</td>
+                <td>Toont context rond het onderwerp.</td>
+                <td>Footer-links zonder inhoudelijke relatie.</td>
+              </tr>
+              <tr>
+                <td>Article/TechArticle schema</td>
+                <td>Verduidelijkt metadata zoals auteur, datum en onderwerp.</td>
+                <td>Garantie op AI-vermelding.</td>
+              </tr>
+              <tr>
+                <td>llms.txt</td>
+                <td>Kan als inhoudskaart helpen voor AI-systemen.</td>
+                <td>Officiele Google-rankingfactor.</td>
+              </tr>
+              <tr>
+                <td>Tekstuele HTML-content</td>
+                <td>Crawlers en AI-systemen kunnen inhoud lezen.</td>
+                <td>Alleen visuele of JavaScript-afhankelijke content.</td>
+              </tr>
+            </tbody>
+          </table>
 
           <h2>GEO in een contentcluster</h2>
           <p>
@@ -116,6 +181,9 @@
             <a href="https://rankpilot.nl/geo/" target="_blank" rel="noopener">GEO optimalisatie voor AI Overviews</a>
             en verdiepende content over
             <a href="https://rankpilot.nl/kennisbank/geo-optimalisatie-zo-word-je-zichtbaar-in-ai-zoekmachines/" target="_blank" rel="noopener">zichtbaar worden in AI-zoekmachines</a>.
+          </p>
+          <p>
+            Een praktische clusteropzet vind je in de gids <a href="../contentcluster-voorbeeld/">contentclusters bouwen met interne linkmatrix</a>.
           </p>
 
           <h2>Structured data helpt, maar lost geen dunne content op</h2>
@@ -137,15 +205,30 @@
             <a href="https://rankpilot.nl/kennisbank/llms-txt-implementeren-nieuwe-standaard/" target="_blank" rel="noopener">llms.txt implementeren</a>.
           </p>
 
-          <h2>Checklist voor een GEO-pagina</h2>
-          <ol>
-            <li>Begin met een direct antwoord op de hoofdvraag.</li>
-            <li>Gebruik beschrijvende H2's die echte vragen of deelproblemen raken.</li>
-            <li>Voeg bronnen toe bij feiten, trends, cijfers en richtlijnen.</li>
-            <li>Link naar verwante clusterpagina's en naar primaire commerciële vervolgpagina's.</li>
-            <li>Gebruik Article of TechArticle schema met datum, auteur, onderwerp en citations.</li>
-            <li>Controleer of de pagina zonder JavaScript leesbaar blijft.</li>
+          <h2 id="antwoordblok">Voorbeeld van een citeerbaar antwoordblok</h2>
+          <div class="example-box">
+            <p>
+              GEO optimalisatie betekent dat je content zo structureert dat zoekmachines en AI-systemen snel begrijpen
+              welke vraag wordt beantwoord, welke bronnen de claim ondersteunen en welke vervolginformatie relevant is.
+              In de praktijk bestaat GEO uit duidelijke koppen, korte antwoordblokken, zichtbare bronnen, interne links,
+              gestructureerde data en technisch toegankelijke HTML. Het vervangt normale SEO niet; het maakt goede SEO-
+              content makkelijker te begrijpen en te gebruiken in samengestelde antwoorden.
+            </p>
+          </div>
+
+          <h2 id="checklist">Checklist voor een GEO-pagina</h2>
+          <ol class="workflow-map">
+            <li><strong>Hoofdvraag:</strong> beantwoord de vraag direct binnen de eerste 100 woorden.</li>
+            <li><strong>Koppen:</strong> gebruik beschrijvende H2's die echte deelvragen behandelen.</li>
+            <li><strong>Bronnen:</strong> voeg zichtbare bronnen toe bij feiten, trends, cijfers en richtlijnen.</li>
+            <li><strong>Cluster:</strong> link naar verwante pagina's en relevante vervolgstappen.</li>
+            <li><strong>Schema:</strong> gebruik Article of TechArticle met datum, auteur, onderwerp en citations.</li>
+            <li><strong>Techniek:</strong> controleer HTML, snippets, indexatie en leesbaarheid zonder JavaScript.</li>
           </ol>
+          <p>
+            Google's <a href="https://developers.google.com/search/docs/essentials/technical" target="_blank" rel="noopener">technische Search-vereisten</a>
+            blijven ook voor AI-zichtbaarheid een ondergrens.
+          </p>
 
           <h2>Wanneer RankPilot of Flowstate past</h2>
           <p>
@@ -169,6 +252,18 @@
   </main>
 
   <footer class="site-footer">
+    <nav class="container footer-links" aria-label="Contenthub">
+      <a href="../ai-automatisering/">AI</a>
+      <a href="../sales-automation/">Sales</a>
+      <a href="../content-automatisering/">Content</a>
+      <a href="../seo-automatisering/">SEO</a>
+      <a href="../geo-ai-overviews/">GEO</a>
+      <a href="../google-indexatie/">Indexatie</a>
+      <a href="../kosten-ai-automatisering/">Kosten</a>
+      <a href="../n8n-make-zapier/">Tools</a>
+      <a href="../blogs-uitbesteden/">Blogs</a>
+      <a href="../contentcluster-voorbeeld/">Clusters</a>
+    </nav>
     <div class="container footer-inner">
       <p>Laatst bijgewerkt: 26 mei 2026.</p>
       <p><a href="../">Home</a> · <a href="../bronnen/">Bronnen</a></p>

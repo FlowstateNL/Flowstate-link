@@ -26,7 +26,8 @@
     ],
     "citation": [
       "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-      "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+      "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
     ]
   }
   </script>
@@ -39,6 +40,7 @@
       <nav class="nav" aria-label="Hoofdnavigatie">
         <a href="../sales-automation/">Sales</a>
         <a href="../content-automatisering/">Content</a>
+        <a href="../kosten-ai-automatisering/">Kosten</a>
         <a href="../seo-automatisering/">SEO</a>
         <a href="../bronnen/">Bronnen</a>
       </nav>
@@ -82,6 +84,15 @@
               vaak verstandiger dan losse no-code bouwsels.
             </p>
           </div>
+          <div class="toc-card">
+            <h3>Op deze pagina</h3>
+            <ul>
+              <li><a href="#proces-score">Proces-score</a></li>
+              <li><a href="#toolkeuze">Toolkeuze</a></li>
+              <li><a href="#risico">Risico en governance</a></li>
+              <li><a href="#voorbeeld">Voorbeeldworkflow</a></li>
+            </ul>
+          </div>
         </aside>
         <article class="prose">
           <h2>Waarom AI-projecten vaak vastlopen</h2>
@@ -106,6 +117,61 @@
             <li>Een medewerker kan uitzonderingen overnemen.</li>
           </ul>
 
+          <h2 id="proces-score">Geef elk proces eerst een score</h2>
+          <p>
+            Voordat je iets bouwt, kun je een proces scoren op vijf punten. Geef ieder onderdeel een score van 1 tot 5.
+            Alles onder 15 punten is meestal nog te vaag. Alles boven 20 punten is een sterke kandidaat voor een MVP.
+          </p>
+          <div class="score-grid" aria-label="Scoremodel voor AI automatisering">
+            <div class="score-item">
+              <strong>1</strong>
+              <p><b>Volume:</b> hoe vaak komt het proces voor per week?</p>
+            </div>
+            <div class="score-item">
+              <strong>2</strong>
+              <p><b>Regels:</b> zijn keuzes duidelijk te beschrijven?</p>
+            </div>
+            <div class="score-item">
+              <strong>3</strong>
+              <p><b>Data:</b> is de input compleet en betrouwbaar genoeg?</p>
+            </div>
+            <div class="score-item">
+              <strong>4</strong>
+              <p><b>Risico:</b> zijn fouten omkeerbaar en zichtbaar?</p>
+            </div>
+            <div class="score-item">
+              <strong>5</strong>
+              <p><b>Waarde:</b> levert het tijd, omzet of kwaliteit op?</p>
+            </div>
+          </div>
+
+          <table class="decision-table">
+            <thead>
+              <tr>
+                <th>Score</th>
+                <th>Betekenis</th>
+                <th>Advies</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>5-14</td>
+                <td>Proces is nog onduidelijk, te uitzonderlijk of te risicovol.</td>
+                <td>Beschrijf eerst de stappen en verzamel betere inputdata.</td>
+              </tr>
+              <tr>
+                <td>15-20</td>
+                <td>Interessante kandidaat, maar nog niet geschikt voor volledige automatisering.</td>
+                <td>Start met semi-automatisering: concepten, controles en reminders.</td>
+              </tr>
+              <tr>
+                <td>21-25</td>
+                <td>Goede MVP-kandidaat met duidelijke waarde en beheersbaar risico.</td>
+                <td>Bouw een workflow met logging, fallback en menselijke review.</td>
+              </tr>
+            </tbody>
+          </table>
+
           <h2>Voorbeelden met hoge kans op rendement</h2>
           <div class="grid-3">
             <div class="mini-card">
@@ -122,7 +188,21 @@
             </div>
           </div>
 
-          <h2>n8n, Make of Zapier?</h2>
+          <div class="example-box" id="voorbeeld">
+            <h3>Voorbeeld: van website-aanvraag naar salesactie</h3>
+            <p>
+              Een B2B-bedrijf krijgt aanvragen via een formulier. De oude werkwijze: iemand kopieert gegevens naar het
+              CRM, zoekt het bedrijf op, leest de aanvraag, stuurt een standaardmail en plant later een taak. De betere
+              workflow: formulierdata komt binnen, de bedrijfswebsite wordt opgehaald, de aanvraag wordt samengevat,
+              het CRM wordt bijgewerkt, sales krijgt een taak met context en de lead ontvangt een passende bevestiging.
+            </p>
+            <p>
+              De AI beslist hier niet zelfstandig over prijs of belofte. Hij doet het voorwerk en maakt de menselijke
+              opvolging sneller en consistenter.
+            </p>
+          </div>
+
+          <h2 id="toolkeuze">n8n, Make of Zapier?</h2>
           <p>
             Zapier is vaak snel voor simpele koppelingen. Make is visueel sterk en toegankelijk voor marketingteams.
             n8n is interessant wanneer je meer controle, self-hosting, complexere logica en API-flexibiliteit wilt.
@@ -130,12 +210,54 @@
             <a href="https://goflowstate.nl/kennisbank/make-vs-zapier-vs-n8n-de-strategische-keuzegids-voor-bedrijfsautomatisering-in-2026/" target="_blank" rel="noopener">Make vs Zapier vs n8n</a>
             een relevante vervolglezing.
           </p>
+          <table class="decision-table">
+            <thead>
+              <tr>
+                <th>Situatie</th>
+                <th>Meestal passend</th>
+                <th>Waarom</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Simpele SaaS-koppeling met weinig logica</td>
+                <td>Zapier</td>
+                <td>Snel live en veel standaardintegraties.</td>
+              </tr>
+              <tr>
+                <td>Marketingflow met visuele stappen en veel no-code beheer</td>
+                <td>Make</td>
+                <td>Overzichtelijk voor teams die processen zelf willen beheren.</td>
+              </tr>
+              <tr>
+                <td>Complexe API-logica, privacy-eisen of self-hosting</td>
+                <td>n8n</td>
+                <td>Meer controle over data, hosting en custom logica.</td>
+              </tr>
+              <tr>
+                <td>Meerdere bedrijfskritische systemen en maatwerkregels</td>
+                <td>Maatwerk workflow</td>
+                <td>Architectuur, monitoring en foutafhandeling worden belangrijker dan de tool.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Lees ook de verdiepingspagina <a href="../n8n-make-zapier/">n8n, Make of Zapier kiezen</a> voor een uitgebreider
+            besliskader.
+          </p>
 
-          <h2>Security en AVG horen in het ontwerp</h2>
+          <h2 id="risico">Security, AVG en AI Act horen in het ontwerp</h2>
           <p>
             AI automatisering raakt vaak klantdata, offertes, e-mails en interne documenten. Daarom hoort security
             niet pas achteraf in de checklist. Denk vooraf na over logging, dataminimalisatie, toegangsrechten,
             modelkeuze, bewaartermijnen en wie output mag goedkeuren.
+          </p>
+          <p>
+            De Europese Commissie beschrijft de AI Act als een risicogebaseerd juridisch kader voor AI. Voor veel MKB-
+            workflows zal vooral gezond governancewerk relevant zijn: weten welke data wordt verwerkt, wie output
+            controleert, hoe fouten worden gemeld en of medewerkers begrijpen waar AI wel en niet voor bedoeld is.
+            Zie de officiele pagina over het
+            <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">EU-kader voor AI</a>.
           </p>
           <p>
             Bij gevoelige processen is een self-hosted of gecontroleerde workflowarchitectuur vaak beter dan losse
@@ -143,13 +265,38 @@
             <a href="https://goflowstate.nl/kennisbank/data-security-in-no-code-n8n-self-hosting-vs-cloud-oplossingen/" target="_blank" rel="noopener">veilige no-code automatisering en n8n security</a>.
           </p>
 
+          <h2>Welke taken moet je niet als eerste automatiseren?</h2>
+          <p>
+            Begin niet met taken waar kleine fouten grote gevolgen hebben, zoals definitieve juridische toezeggingen,
+            medische beoordeling, personeelsselectie, kredietbeslissingen of automatische prijsafspraken zonder review.
+            Zulke processen kunnen later wel AI-ondersteuning krijgen, maar meestal niet als eerste volledig automatische flow.
+          </p>
+          <ul>
+            <li><strong>Te veel uitzonderingen:</strong> eerst standaardiseren, daarna automatiseren.</li>
+            <li><strong>Slechte data:</strong> eerst databronnen opschonen en eigenaarschap regelen.</li>
+            <li><strong>Geen eigenaar:</strong> elke workflow heeft monitoring en incidentafhandeling nodig.</li>
+            <li><strong>Onduidelijke waarde:</strong> reken eerst uit wat tijdwinst of conversieverbetering waard is.</li>
+          </ul>
+
           <h2>Implementatie in vier stappen</h2>
-          <ol>
-            <li>Maak een proceskaart: input, stappen, uitzonderingen, output en eigenaar.</li>
-            <li>Bereken de waarde: tijdwinst, minder fouten, snellere opvolging of hogere conversie.</li>
-            <li>Bouw een MVP met human-in-the-loop voor elke risicovolle stap.</li>
-            <li>Meet 30 dagen en beslis daarna of opschaling zinvol is.</li>
+          <ol class="workflow-map">
+            <li><strong>Proceskaart:</strong> input, stappen, uitzonderingen, output, eigenaar en risico's.</li>
+            <li><strong>Businesscase:</strong> tijdwinst, minder fouten, snellere opvolging of hogere conversie.</li>
+            <li><strong>MVP:</strong> kleine workflow met human-in-the-loop voor elke risicovolle stap.</li>
+            <li><strong>Meetperiode:</strong> 30 dagen meten op doorlooptijd, foutpercentage, adoptie en feedback.</li>
+            <li><strong>Opschaling:</strong> pas uitbreiden wanneer logging, fallback en eigenaarschap bewezen werken.</li>
           </ol>
+
+          <h2>Hoe bereken je de waarde?</h2>
+          <p>
+            Gebruik een simpele formule: aantal taken per maand x minuten per taak x intern uurtarief. Tel daarna
+            correctiewerk, snellere opvolging en betere conversie apart mee. Een workflow die 12 uur per maand bespaart
+            kan alsnog belangrijk zijn wanneer hij ook fouten voorkomt of salesreacties versnelt.
+          </p>
+          <p>
+            De aparte gids <a href="../kosten-ai-automatisering/">wat kost AI automatisering echt?</a> werkt dit uit met
+            een rekenmodel voor tijdwinst, implementatiekosten en onderhoud.
+          </p>
 
           <h2>Wanneer uitbesteden logisch is</h2>
           <p>
@@ -181,6 +328,18 @@
   </main>
 
   <footer class="site-footer">
+    <nav class="container footer-links" aria-label="Contenthub">
+      <a href="../ai-automatisering/">AI</a>
+      <a href="../sales-automation/">Sales</a>
+      <a href="../content-automatisering/">Content</a>
+      <a href="../seo-automatisering/">SEO</a>
+      <a href="../geo-ai-overviews/">GEO</a>
+      <a href="../google-indexatie/">Indexatie</a>
+      <a href="../kosten-ai-automatisering/">Kosten</a>
+      <a href="../n8n-make-zapier/">Tools</a>
+      <a href="../blogs-uitbesteden/">Blogs</a>
+      <a href="../contentcluster-voorbeeld/">Clusters</a>
+    </nav>
     <div class="container footer-inner">
       <p>Laatst bijgewerkt: 26 mei 2026.</p>
       <p><a href="../">Home</a> · <a href="../bronnen/">Bronnen</a></p>

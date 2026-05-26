@@ -11,6 +11,10 @@ Statische contenthub voor GitHub Pages over AI automatisering, sales automation,
 - `seo-automatisering/` - SEO workflow, contentclusters en interne links
 - `geo-ai-overviews/` - GEO en AI Overviews
 - `google-indexatie/` - technische indexatiechecklist
+- `kosten-ai-automatisering/` - kosten, ROI en terugverdientijd
+- `n8n-make-zapier/` - vergelijking van workflowtools
+- `blogs-uitbesteden/` - checklist voor SEO-content uitbesteden
+- `contentcluster-voorbeeld/` - clusterstructuur, linkmatrix en anchors
 - `bronnen/` - bronnen en verdiepende links
 - `over/` - uitleg over de site
 - `robots.txt`, `sitemap.xml`, `llms.txt` - crawlbaarheid en AI-readability

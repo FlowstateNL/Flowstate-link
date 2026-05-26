@@ -20,7 +20,11 @@
     "author": { "@type": "Organization", "name": "Groei & Automatisering" },
     "about": ["sales automation", "leadopvolging", "CRM", "AI automatisering"],
     "mentions": [{ "@type": "Organization", "name": "Flowstate", "url": "https://goflowstate.nl/" }],
-    "citation": ["https://www.insidesales.com/response-time-matters/"]
+    "citation": [
+      "https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+      "https://gdpr.eu/article-22-automated-individual-decision-making/",
+      "https://www.edpb.europa.eu/our-work-tools/our-documents/topic/automated-decision-profiling_en?page=1"
+    ]
   }
   </script>
 </head>
@@ -33,6 +37,7 @@
         <a href="../ai-automatisering/">AI</a>
         <a href="../content-automatisering/">Content</a>
         <a href="../seo-automatisering/">SEO</a>
+        <a href="../geo-ai-overviews/">GEO</a>
         <a href="../google-indexatie/">Indexatie</a>
       </nav>
     </div>
@@ -74,25 +79,76 @@
               <a href="https://goflowstate.nl/services/leads-en-sales/" target="_blank" rel="noopener">sales automatisering en leadopvolging</a>.
             </p>
           </div>
+          <div class="toc-card">
+            <h3>Op deze pagina</h3>
+            <ul>
+              <li><a href="#sla">Speed-to-lead SLA</a></li>
+              <li><a href="#kwalificatie">Leadkwalificatie</a></li>
+              <li><a href="#crm">CRM-velden</a></li>
+              <li><a href="#scenarios">Follow-upscenario's</a></li>
+            </ul>
+          </div>
         </aside>
         <article class="prose">
           <h2>Waarom snelheid belangrijk is</h2>
           <p>
-            Bij inbound leads telt timing. Onderzoek van InsideSales/XANT over
-            <a href="https://www.insidesales.com/response-time-matters/" target="_blank" rel="noopener">lead response time</a>
-            wordt vaak aangehaald omdat het laat zien dat snelle opvolging de kans op contact en conversie sterk kan
-            verhogen. De les is niet dat elk bedrijf direct moet bellen, maar dat de eerste vervolgstap niet mag blijven liggen.
+            Bij inbound leads telt timing. Het bekende Harvard Business Review-artikel
+            <a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener">The Short Life of Online Sales Leads</a>
+            waarschuwde al dat veel bedrijven online aanvragen te traag opvolgen. De praktische les is niet dat elk
+            bedrijf agressief moet bellen, maar dat de eerste vervolgstap niet mag blijven liggen.
           </p>
 
+          <h2 id="sla">Speed-to-lead SLA: wie krijgt wanneer opvolging?</h2>
+          <p>
+            Niet elke lead verdient dezelfde actie. Een offerteaanvraag hoort sneller en persoonlijker opgevolgd te
+            worden dan een nieuwsbriefinschrijving. Leg daarom per leadtype een service level agreement vast.
+          </p>
+          <table class="decision-table">
+            <thead>
+              <tr>
+                <th>Leadtype</th>
+                <th>Eerste actie</th>
+                <th>SLA</th>
+                <th>Automatisering</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Demo- of offerteaanvraag</td>
+                <td>Beltaak plus persoonlijke mail</td>
+                <td>5 minuten</td>
+                <td>Directe routing, CRM-taak en alert naar sales.</td>
+              </tr>
+              <tr>
+                <td>Algemeen contactformulier</td>
+                <td>Kwalificatie en juiste eigenaar</td>
+                <td>1 uur</td>
+                <td>Verrijking, deduplicatie en lifecycle update.</td>
+              </tr>
+              <tr>
+                <td>Download of nieuwsbrief</td>
+                <td>Nurture-flow</td>
+                <td>24 uur</td>
+                <td>Segmentatie, contentreeks en lichte scoring.</td>
+              </tr>
+              <tr>
+                <td>Bestaande klantvraag</td>
+                <td>Account owner alert</td>
+                <td>30 minuten</td>
+                <td>CRM-match, klantcontext en prioriteit.</td>
+              </tr>
+            </tbody>
+          </table>
+
           <h2>De ideale flow in zeven stappen</h2>
-          <ol>
-            <li>Lead komt binnen via formulier, mail, chat of advertentie.</li>
-            <li>Workflow valideert contactgegevens en bedrijfswebsite.</li>
-            <li>AI of regels labelen de aanvraag op intentie, branche, budgetfit en urgentie.</li>
-            <li>CRM-record wordt aangemaakt of bijgewerkt.</li>
-            <li>Sales krijgt een samenvatting met voorgestelde vervolgstap.</li>
-            <li>Een passende mail, beltaak of offertevoorbereiding wordt klaargezet.</li>
-            <li>Reminders bewaken opvolging, zonder de relatie spammy te maken.</li>
+          <ol class="workflow-map">
+            <li><strong>Intake:</strong> lead komt binnen via formulier, mail, chat of advertentie.</li>
+            <li><strong>Validatie:</strong> workflow controleert e-mail, telefoonnummer, website en dubbele records.</li>
+            <li><strong>Context:</strong> bedrijfsdata, pagina van herkomst en aanvraagtekst worden samengevat.</li>
+            <li><strong>Kwalificatie:</strong> regels en AI labelen intentie, branche, budgetfit en urgentie.</li>
+            <li><strong>CRM:</strong> record wordt aangemaakt of bijgewerkt met eigenaar en volgende actie.</li>
+            <li><strong>Voorbereiding:</strong> sales krijgt conceptvragen, voorsteltekst of offerte-input.</li>
+            <li><strong>Bewaking:</strong> reminders volgen de SLA zonder ongepaste automatische druk.</li>
           </ol>
 
           <h2>Wat je wel en niet moet automatiseren</h2>
@@ -111,12 +167,61 @@
             </div>
           </div>
 
+          <h2 id="kwalificatie">Leadkwalificatie-matrix</h2>
+          <p>
+            Een simpele matrix voorkomt dat automatisering alleen op “hoge score” stuurt. Fit en intentie zijn
+            verschillende dingen: iemand kan goed passen maar nog niet koopklaar zijn, of urgent zijn maar slecht passen.
+          </p>
+          <table class="decision-table">
+            <thead>
+              <tr>
+                <th>Fit / intentie</th>
+                <th>Hoge intentie</th>
+                <th>Lage intentie</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Goede fit</td>
+                <td>Direct opvolgen door sales met context en persoonlijke eerste vraag.</td>
+                <td>Nurture-flow met zachte CTA en relevante cases.</td>
+              </tr>
+              <tr>
+                <td>Twijfel-fit</td>
+                <td>AI-samenvatting en menselijke beoordeling voordat sales tijd investeert.</td>
+                <td>Verrijken, taggen en later opnieuw beoordelen.</td>
+              </tr>
+              <tr>
+                <td>Slechte fit</td>
+                <td>Beleefde afwijzing, doorverwijzing of low-touch antwoord.</td>
+                <td>Geen salesactie, wel bron en reden taggen.</td>
+              </tr>
+            </tbody>
+          </table>
+
           <h2>CRM-koppelingen zijn de basis</h2>
           <p>
             Een salesflow wordt pas betrouwbaar wanneer het CRM leidend blijft. Automatisering moet geen tweede
             waarheid maken in spreadsheets, inboxen of aparte dashboards. De workflow moet bestaande velden verrijken,
             duplicaten voorkomen en duidelijk loggen waarom een lead een bepaalde status kreeg.
           </p>
+
+          <h2 id="crm">Minimale CRM-velden voor betrouwbare sales automation</h2>
+          <p>
+            Zonder goede velden wordt automatisering een black box. Deze velden zijn vaak het minimum om opvolging,
+            rapportage en foutanalyse betrouwbaar te maken.
+          </p>
+          <ul>
+            <li>Leadbron, campagne en oorspronkelijke landingspagina.</li>
+            <li>Consent of toestemming voor opvolging.</li>
+            <li>Lifecycle stage en leadstatus.</li>
+            <li>Lead owner of wachtrij.</li>
+            <li>First response timestamp.</li>
+            <li>SLA-status: op tijd, te laat, mislukt of handmatig overgenomen.</li>
+            <li>Kwalificatiereden: budget, timing, behoefte, fit en urgentie.</li>
+            <li>Volgende actie, deadline en verantwoordelijke.</li>
+            <li>Workflowversie, zodat fouten herleidbaar blijven.</li>
+          </ul>
 
           <h2>Offerteflows</h2>
           <p>
@@ -129,6 +234,51 @@
             <a href="https://goflowstate.nl/kennisbank/ai-offerte-automatisering-verkoopproces/" target="_blank" rel="noopener">AI offerte automatisering in het verkoopproces</a>
             goed als verdiepende bron.
           </p>
+
+          <div class="example-box">
+            <h3>Let op met automatische scoring</h3>
+            <p>
+              Lead scoring is nuttig voor prioriteit, maar riskant wanneer mensen stilzwijgend worden uitgesloten of
+              wanneer een score grote gevolgen krijgt. Bij besluiten met juridisch of vergelijkbaar significant effect
+              is menselijke beoordeling extra belangrijk. Zie ook GDPR Article 22 over
+              <a href="https://gdpr.eu/article-22-automated-individual-decision-making/" target="_blank" rel="noopener">geautomatiseerde individuele besluitvorming</a>
+              en de EDPB-pagina over
+              <a href="https://www.edpb.europa.eu/our-work-tools/our-documents/topic/automated-decision-profiling_en?page=1" target="_blank" rel="noopener">automated decision-making en profiling</a>.
+            </p>
+          </div>
+
+          <h2 id="scenarios">Follow-upscenario's</h2>
+          <table class="decision-table">
+            <thead>
+              <tr>
+                <th>Scenario</th>
+                <th>Automatische voorbereiding</th>
+                <th>Menselijke actie</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nieuwe offerteaanvraag</td>
+                <td>Samenvatting, bedrijfsinfo, voorgestelde vragen en CRM-taak.</td>
+                <td>Bel of persoonlijke mail met concrete eerste vraag.</td>
+              </tr>
+              <tr>
+                <td>Geen reactie na offerte</td>
+                <td>Reminderconcept met context, waarde en openstaande vraag.</td>
+                <td>Verkoper kiest toon, timing en wel/niet bellen.</td>
+              </tr>
+              <tr>
+                <td>No-show bij afspraak</td>
+                <td>Nieuwe planlink en korte herbevestiging.</td>
+                <td>Alleen bellen bij hoge waarde of bestaande relatie.</td>
+              </tr>
+              <tr>
+                <td>Oude lead heractiveren</td>
+                <td>Laatste contact, segment, trigger en relevant haakje ophalen.</td>
+                <td>Persoonlijke invalshoek toevoegen voordat bericht eruit gaat.</td>
+              </tr>
+            </tbody>
+          </table>
 
           <h2>Checklist voor livegang</h2>
           <ul>
@@ -161,6 +311,18 @@
   </main>
 
   <footer class="site-footer">
+    <nav class="container footer-links" aria-label="Contenthub">
+      <a href="../ai-automatisering/">AI</a>
+      <a href="../sales-automation/">Sales</a>
+      <a href="../content-automatisering/">Content</a>
+      <a href="../seo-automatisering/">SEO</a>
+      <a href="../geo-ai-overviews/">GEO</a>
+      <a href="../google-indexatie/">Indexatie</a>
+      <a href="../kosten-ai-automatisering/">Kosten</a>
+      <a href="../n8n-make-zapier/">Tools</a>
+      <a href="../blogs-uitbesteden/">Blogs</a>
+      <a href="../contentcluster-voorbeeld/">Clusters</a>
+    </nav>
     <div class="container footer-inner">
       <p>Laatst bijgewerkt: 26 mei 2026.</p>
       <p><a href="../">Home</a> · <a href="../bronnen/">Bronnen</a></p>

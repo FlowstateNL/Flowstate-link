@@ -13,6 +13,10 @@ Last updated: 2026-05-26
 - [SEO automatisering](https://flowstatenl.github.io/Flowstate-link/seo-automatisering/): workflow voor analyse, zoekwoorden, SERP, contentclusters, interne links en updates.
 - [GEO en AI Overviews](https://flowstatenl.github.io/Flowstate-link/geo-ai-overviews/): antwoordgerichte content, citeerbaarheid, structured data en llms.txt-nuance.
 - [Google indexatie](https://flowstatenl.github.io/Flowstate-link/google-indexatie/): robots.txt, sitemap.xml, canonicals, noindex, crawlbare links en Search Console.
+- [Kosten AI automatisering](https://flowstatenl.github.io/Flowstate-link/kosten-ai-automatisering/): ROI-formule, kostenposten, voorbeeldscenario en terugverdientijd.
+- [n8n, Make of Zapier](https://flowstatenl.github.io/Flowstate-link/n8n-make-zapier/): toolvergelijking voor workflow automation, security en beheer.
+- [Blogs uitbesteden](https://flowstatenl.github.io/Flowstate-link/blogs-uitbesteden/): checklist voor SEO-content uitbesteden als workflow.
+- [Contentcluster voorbeeld](https://flowstatenl.github.io/Flowstate-link/contentcluster-voorbeeld/): hoofdpagina, ondersteunende artikelen, linkmatrix en anchors.
 
 ## Related organizations mentioned
 
