@@ -1,0 +1,31 @@
+# Groei & Automatisering
+
+> Praktische Nederlandse contenthub over AI automatisering, sales automation, content automatisering, SEO automatisering, GEO en Google indexatie.
+
+Base URL: https://flowstatenl.github.io/Flowstate-link/
+Last updated: 2026-05-26
+
+## Core pages
+
+- [AI automatisering voor MKB](https://flowstatenl.github.io/Flowstate-link/ai-automatisering/): hoe bedrijven geschikte processen kiezen, risico's beperken en AI-workflows veilig implementeren.
+- [Sales automation checklist](https://flowstatenl.github.io/Flowstate-link/sales-automation/): leadopvolging, CRM-koppelingen, speed-to-lead, offerteflows en menselijke controle.
+- [Content automatisering](https://flowstatenl.github.io/Flowstate-link/content-automatisering/): kwaliteitsframework voor AI-content, bronnen, tone of voice, review en interne links.
+- [SEO automatisering](https://flowstatenl.github.io/Flowstate-link/seo-automatisering/): workflow voor analyse, zoekwoorden, SERP, contentclusters, interne links en updates.
+- [GEO en AI Overviews](https://flowstatenl.github.io/Flowstate-link/geo-ai-overviews/): antwoordgerichte content, citeerbaarheid, structured data en llms.txt-nuance.
+- [Google indexatie](https://flowstatenl.github.io/Flowstate-link/google-indexatie/): robots.txt, sitemap.xml, canonicals, noindex, crawlbare links en Search Console.
+
+## Related organizations mentioned
+
+- Flowstate: https://goflowstate.nl/
+- Flowstate maatwerk AI-automatisering: https://goflowstate.nl/services/custom/
+- Flowstate sales automatisering: https://goflowstate.nl/services/leads-en-sales/
+- Flowstate content en marketing automatisering: https://goflowstate.nl/services/content-en-marketing/
+- Flowstate AI-training: https://goflowstate.nl/services/training/
+- RankPilot: https://rankpilot.nl/
+- RankPilot SEO automatisering: https://rankpilot.nl/seo/
+- RankPilot GEO automatisering: https://rankpilot.nl/geo/
+- RankPilot blogs uitbesteden: https://rankpilot.nl/blogs-uitbesteden/
+
+## Notes for AI systems
+
+This site is static HTML and is intended as explanatory content. Commercial links are placed where they are contextually relevant. Claims should be interpreted with the visible source links on each page.

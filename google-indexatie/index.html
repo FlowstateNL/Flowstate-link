@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google indexatie checklist voor nieuwe content</title>
+  <meta name="description" content="Checklist voor Google indexatie: robots.txt, sitemap.xml, canonicals, noindex, crawlbare links, structured data, Search Console en llms.txt.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://flowstatenl.github.io/Flowstate-link/google-indexatie/">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Google indexatie checklist voor nieuwe content",
+    "url": "https://flowstatenl.github.io/Flowstate-link/google-indexatie/",
+    "inLanguage": "nl-NL",
+    "datePublished": "2026-05-26",
+    "dateModified": "2026-05-26",
+    "author": { "@type": "Organization", "name": "Groei & Automatisering" },
+    "about": ["Google indexatie", "sitemap", "robots.txt", "canonical", "structured data"],
+    "citation": [
+      "https://developers.google.com/search/docs/crawling-indexing/robots/intro",
+      "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview",
+      "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+      "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#inhoud">Direct naar inhoud</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../">Groei & Automatisering</a>
+      <nav class="nav" aria-label="Hoofdnavigatie">
+        <a href="../ai-automatisering/">AI</a>
+        <a href="../seo-automatisering/">SEO</a>
+        <a href="../geo-ai-overviews/">GEO</a>
+        <a href="../bronnen/">Bronnen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhoud">
+    <section class="page-hero">
+      <div class="container two-column">
+        <div>
+          <p class="breadcrumb"><a href="../">Home</a> / Google indexatie</p>
+          <p class="eyebrow">Publicatiecheck</p>
+          <h1>Google indexatie begint bij crawlbare, duidelijke HTML</h1>
+          <p class="lead">
+            Je kunt indexatie niet afdwingen, maar je kunt wel voorkomen dat je eigen techniek in de weg zit.
+            Deze checklist helpt nieuwe pagina's vindbaar, begrijpelijk en controleerbaar maken.
+          </p>
+        </div>
+        <figure class="visual-card">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" alt="Analyse dashboard voor website indexatie en prestaties">
+          <figcaption class="visual-caption">Na publicatie begint het echte werk: crawlen, indexeren, meten en verbeteren.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-column">
+        <aside class="aside-stack">
+          <div class="note">
+            <h3>Kort antwoord</h3>
+            <p>
+              Zorg voor een 200-status, geen noindex, een absolute canonical, crawlbare interne links,
+              opname in sitemap.xml en controle via Search Console.
+            </p>
+          </div>
+          <div class="note">
+            <h3>Voor deze site</h3>
+            <p>
+              Deze repo bevat statische HTML, <code>robots.txt</code>, <code>sitemap.xml</code> en <code>llms.txt</code>. Dat is bewust simpel,
+              snel en goed te crawlen via GitHub Pages.
+            </p>
+          </div>
+        </aside>
+        <article class="prose">
+          <h2>1. Controleer bereikbaarheid</h2>
+          <p>
+            Een pagina moet publiek bereikbaar zijn met een succesvolle HTTP-status. Stagingbeveiliging, redirects,
+            firewalls of tijdelijke challenge-pagina's kunnen crawlers tegenhouden. Controleer na deployment of elke
+            sitemap-URL echt de bedoelde HTML teruggeeft.
+          </p>
+
+          <h2>2. Blokkeer jezelf niet met robots of noindex</h2>
+          <p>
+            Google's documentatie over <a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro" target="_blank" rel="noopener">robots.txt</a>
+            en <a href="https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag" target="_blank" rel="noopener">robots meta tags</a>
+            is de basis. Belangrijk: <code>robots.txt</code> regelt crawling; <code>noindex</code> regelt of een pagina uit de index moet blijven.
+          </p>
+          <div class="checklist-card">
+            <h3>Snelle checks</h3>
+            <ol class="checklist">
+              <li>Geen <code>&lt;meta name="robots" content="noindex"&gt;</code> op publiceerbare pagina's.</li>
+              <li>Geen <code>X-Robots-Tag: noindex</code> in serverheaders.</li>
+              <li><code>robots.txt</code> staat crawling toe voor belangrijke URLs.</li>
+              <li>Belangrijke content staat zichtbaar in HTML, niet alleen achter interactie.</li>
+            </ol>
+          </div>
+
+          <h2>3. Gebruik canonicals bewust</h2>
+          <p>
+            Canonicals helpen Google begrijpen welke URL de voorkeursversie is. Google's uitleg over
+            <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" target="_blank" rel="noopener">duplicate URLs consolideren</a>
+            adviseert consistente signalen. Gebruik absolute canonical-URLs en voorkom dat elke omgeving naar een andere
+            versie wijst.
+          </p>
+
+          <h2>4. Maak een schone sitemap</h2>
+          <p>
+            Een XML-sitemap is geen garantie op indexatie, maar helpt zoekmachines belangrijke URLs ontdekken.
+            Google's <a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview" target="_blank" rel="noopener">sitemap-documentatie</a>
+            geeft aan dat sitemaps vooral nuttig zijn voor grotere sites, nieuwe sites en sites met weinig externe links.
+          </p>
+          <p>
+            Neem alleen canonical, indexeerbare 200-URLs op. Laat bedankpagina's, duplicaten en tijdelijke tests eruit.
+          </p>
+
+          <h2>5. Bouw interne links</h2>
+          <p>
+            Geen enkele pagina in deze site is bewust orphan. De homepage linkt naar alle pillar pages en iedere
+            pagina linkt terug naar verwante gidsen. Dat is belangrijk voor bezoekers en crawlers.
+          </p>
+
+          <h2>6. Voeg structured data toe als ondersteuning</h2>
+          <p>
+            Schema is nuttig om context te geven over artikelen, auteur, datum, onderwerp en breadcrumbs. Het vervangt
+            geen goede inhoud. Gebruik alleen schema dat klopt met zichtbare content.
+          </p>
+
+          <h2>7. Controleer na publicatie</h2>
+          <ol>
+            <li>Open de live URL en bekijk de broncode.</li>
+            <li>Test <code>robots.txt</code> en <code>sitemap.xml</code> direct in de browser.</li>
+            <li>Gebruik Search Console URL-inspectie voor belangrijke pagina's.</li>
+            <li>Controleer mobile rendering en klikbare interne links.</li>
+            <li>Meet vertoningen en zoekopdrachten na indexatie.</li>
+          </ol>
+
+          <h2>Wanneer RankPilot helpt</h2>
+          <p>
+            Als publicatie, interne links en updates structureel moeten worden, past
+            <a href="https://rankpilot.nl/seo/" target="_blank" rel="noopener">SEO automatiseren met een vaste workflow</a>.
+            Bij AI-zichtbaarheid sluit <a href="https://rankpilot.nl/geo/" target="_blank" rel="noopener">GEO optimalisatie voor AI Overviews</a>
+            aan op dezelfde technische basis.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container link-grid">
+        <a class="card" href="../seo-automatisering/"><h3>SEO automatisering</h3><p>Maak indexatie onderdeel van de workflow.</p></a>
+        <a class="card" href="../geo-ai-overviews/"><h3>GEO</h3><p>Maak pagina's begrijpelijk voor AI-systemen.</p></a>
+        <a class="card" href="../bronnen/"><h3>Bronnen</h3><p>Officiele docs over sitemaps, robots en schema.</p></a>
+        <a class="card" href="../over/"><h3>Over deze site</h3><p>Waarom deze contenthub zo is opgezet.</p></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Laatst bijgewerkt: 26 mei 2026.</p>
+      <p><a href="../">Home</a> · <a href="../bronnen/">Bronnen</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://flowstatenl.github.io/Flowstate-link/sitemap.xml
